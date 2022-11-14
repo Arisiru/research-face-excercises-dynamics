@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 dvc = {extras = ["gdrive"], version = "*"}
 pandas = "*"
+h5py = "*"
+tensorflow-macos = "*"
+tensorflow-metal = "*"
 
 [dev-packages]
 pre-commit = "*"

@@ -41,7 +41,12 @@ To run a notebook, please make sure youre get into your virtual environtment `pi
 Install named kernel `python -m ipykernel install --user --name=gait-patient-detection`
 After you run `jupyter notebook` from virtual environment and select a kernel named `gait-patient-detection`
 
-### System
+### Mac
 
 Make sure you have wget installed in your system
 for Mac run `brew install wget`
+
+If you're on M1 
+`brew install hdf5`
+`export HDF5_DIR="$(brew --prefix hdf5)"`
+`export PIP_NO_BINARY=h5py && pipenv install h5py`
