@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dvc = {extras = ["gdrive"], version = "*"}
+pandas = "*"
+
+[dev-packages]
+pre-commit = "*"
+
+[requires]
+python_version = "3.8"
