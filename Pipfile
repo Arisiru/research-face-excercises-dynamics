@@ -12,6 +12,8 @@ tensorflow-metal = "*"
 
 [dev-packages]
 pre-commit = "*"
+notebook = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.8"
