@@ -7,8 +7,8 @@ name = "pypi"
 dvc = {extras = ["gdrive"], version = "*"}
 pandas = "*"
 h5py = "*"
-tensorflow-macos = "*"
-tensorflow-metal = "*"
+tensorflow-macos = {version="==2.10"}
+tensorflow-metal = {version="==0.6"}
 
 [dev-packages]
 pre-commit = "*"
