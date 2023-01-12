@@ -9,6 +9,8 @@ pandas = "*"
 h5py = "*"
 tensorflow-macos = {version="==2.10"}
 tensorflow-metal = {version="==0.6"}
+scikit-learn = "*"
+matplotlib = "*"
 
 [dev-packages]
 pre-commit = "*"
