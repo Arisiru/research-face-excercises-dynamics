@@ -38,8 +38,8 @@ Run `pre-commit install` to setup all the from `.pre-commit-config.yaml`
 ### Notebook
 
 To run a notebook, please make sure youre get into your virtual environtment `pipenv shell`
-Install named kernel `python -m ipykernel install --user --name=gait-patient-detection`
-After you run `jupyter notebook` from virtual environment and select a kernel named `gait-patient-detection`
+Install named kernel `python -m ipykernel install --user --name=face-prognosis`
+After you run `jupyter notebook` from virtual environment and select a kernel named `face-prognosis`
 
 ### Mac
 
