@@ -1,0 +1,26 @@
+20230607
+k = 5
+train = 0.8
+val = 0.2
+test = 0.2
+architecture 1
+F1 macro without data augmentation [0.49, 0.60, 0.42, 0.51, 0.45] avg -> 0.494
+F1 macro with data augmentation    [0.97, 0.91, 0.97, 0.95, 0.95] -> 0.95
+
+20230608
+k = 5
+train = 0.8
+val = 0.2
+test = 0.2
+architecture 2(meta, global, frontal)
+F1 macro without data augmentation [0.39, 0.46, 0.49, 0.42, 0.49] avg -> 0.45
+F1 macro with data augmentation    [0.98, 0.96, 0.97, 0.98, 0.99] -> 0.976
+
+20230617
+k = 5
+train = 0.8
+val = 0.2
+test = 0.2
+architecture 2(meta, global, frontal, oral, orbital)
+F1 macro without data augmentation [0.42, 0.60, 0.57, 0.44, 0.51] avg -> 0.508
+F1 macro with data augmentation    [0.98, 0.97, 0.95, 0.96, 0.97] -> 0.966
