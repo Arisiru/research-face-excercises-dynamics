@@ -1,0 +1,23 @@
+{
+    "0_LefteyeMidbottom": "orbital", 
+    "1_LefteyeMidtop": "orbital",  
+    "2_LefteyeInnercorner": "orbital", 
+    "3_LefteyeOutercorner": "orbital",  
+    "4_LefteyebrowInner": "frontal", 
+    "5_LefteyebrowCenter": "frontal",  
+    "6_RighteyeMidbottom": "orbital",  
+    "7_RighteyeMidtop": "orbital", 
+    "8_RighteyeInnercorner": "orbital",  
+    "9_RighteyeOutercorner": "orbital", 
+    "10_RighteyebrowInner": "frontal", 
+    "11_RighteyebrowCenter": "frontal",  
+    "12_NoseTip": "frontal", 
+    "13_MouthLowerlipMidbottom": "oral",
+    "14_MouthLeftcorner": "oral",
+    "15_MouthRightcorner": "oral",
+    "16_MouthUpperlipMidtop": "oral",
+    "17_ChinCenter": "oral", 
+    "18_ForeheadCenter": "frontal", 
+    "19_LeftcheekCenter": "oral", 
+    "20_RightcheekCenter": "oral"
+}
