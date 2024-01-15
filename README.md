@@ -26,7 +26,7 @@ For model and experiment data sets' version control please follow [DVC documenta
 If you followed the pipenv section the dvc should be part of your virtual environment.
 Please pull data from storage `$ dvc pull`
 
-Access to the data storage can be requested through Univercity or personal messages.
+Access to the data storage can be requested through University or personal messages.
 
 Use dvc commands to commit, push, pull changes to data and models
 
