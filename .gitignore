@@ -132,7 +132,6 @@ dmypy.json
 .DS_Store
 **/.DS_Store
 
-
 # DVC
 /data
 /old_data
