@@ -86,21 +86,18 @@ def build_meta(exercise, settings):
     meta  = []
     exercise_one_hot = [0] * CONFIG['NUM_EXERCISES']
 
-    exercise_id = None
-    if 'id' in exercise['meta']:
-        exercise_id = exercise['meta']['id']
-    else:
-        exercise_id = int(exercise['meta']['tag'].split('_')[0]) - 1
+    exercise_id = int(exercise['meta']['id']) - 1
     exercise_one_hot[exercise_id] = 1
     meta = exercise_one_hot
     
-    surgery_one_hot = [0] * CONFIG['NUM_FLAG_BS']
-    surgery_one_hot[exercise['meta']['flag_before_surgery']] = 1
-    meta = meta + surgery_one_hot
+    #surgery_one_hot = [0] * CONFIG['NUM_FLAG_BS']
+    #surgery_one_hot[exercise['meta']['flag_before_surgery']] = 1
+    #meta = meta + surgery_one_hot
     
     #length of exercise; 
     if settings['extended_meta']:
-        exercise_length = len(exercise['pois'][list(CONFIG['REGIONS'].keys())[0]]['xs'])
+        exercise_length = len(exercise['pois']['LefteyeMidbottom']['xs'])
+            #list(CONFIG['REGIONS'].keys())[0]
             #print(f'Exercise lenth {exercise_length}')
         meta.append(exercise_length)
 
@@ -133,7 +130,9 @@ def exercise_to_input(file_path, settings):
     # build meta
     exercise_meta = build_meta(exercise, settings)
 
-    evaluation = exercise['meta']['evaluation']
+    evaluation = 0
+    if exercise['meta']['evaluation'] != 'None':
+        evaluation = int(exercise['meta']['evaluation']) - 1
 
     return [
             exercise_meta, 
