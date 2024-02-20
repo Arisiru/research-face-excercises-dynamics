@@ -17,6 +17,7 @@ def setup(root_path, seq_max_len, num_exercises, num_flag_bs):
     CONFIG['ALL_REGIONS'] = json.load(open(os.path.join(setting_path, 'all_regions.json')))
     CONFIG['REGIONS'] = json.load(open(os.path.join(setting_path, 'pois_region.json')))
     CONFIG['BASES'] = json.load(open(os.path.join(setting_path, 'pois_base.json')))
+    CONFIG['SIDES'] = json.load(open(os.path.join(setting_path, 'pois_side.json')))
     
     CONFIG['SEQ_MAX_LEN'] = seq_max_len
 

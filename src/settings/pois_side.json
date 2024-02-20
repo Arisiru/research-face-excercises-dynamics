@@ -1,0 +1,22 @@
+{
+    "left": [
+        "LefteyeMidbottom",
+        "LefteyeMidtop",
+        "LefteyeInnercorner",
+        "LefteyeOutercorner",
+        "LefteyebrowInner",
+        "LefteyebrowCenter",
+        "MouthLeftcorner",
+        "LeftcheekCenter"
+    ],
+    "right": [
+        "RighteyeMidbottom",
+        "RighteyeMidtop",
+        "RighteyeInnercorner",
+        "RighteyeOutercorner",
+        "RighteyebrowInner",
+        "RighteyebrowCenter",
+        "MouthRightcorner",
+        "RightcheekCenter"
+    ]
+}
