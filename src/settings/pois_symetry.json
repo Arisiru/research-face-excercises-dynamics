@@ -1,0 +1,23 @@
+{
+    "LefteyeMidbottom": "RighteyeMidbottom", 
+    "LefteyeMidtop": "RighteyeMidtop",  
+    "LefteyeInnercorner": "RighteyeInnercorner", 
+    "LefteyeOutercorner": "RighteyeOutercorner",  
+    "LefteyebrowInner": "RighteyebrowInner", 
+    "LefteyebrowCenter": "RighteyebrowCenter",  
+    "RighteyeMidbottom": "None",  
+    "RighteyeMidtop": "None", 
+    "RighteyeInnercorner": "None",  
+    "RighteyeOutercorner": "None", 
+    "RighteyebrowInner": "None", 
+    "RighteyebrowCenter": "None",  
+    "NoseTip": "None", 
+    "MouthLowerlipMidbottom": "None",
+    "MouthLeftcorner": "MouthRightcorner",
+    "MouthRightcorner": "None",
+    "MouthUpperlipMidtop": "None",
+    "ChinCenter": "None", 
+    "ForeheadCenter": "None", 
+    "LeftcheekCenter": "RightcheekCenter", 
+    "RightcheekCenter": "None"
+}

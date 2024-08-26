@@ -18,7 +18,7 @@ def setup(root_path, seq_max_len, num_exercises, num_flag_bs):
     CONFIG['REGIONS'] = json.load(open(os.path.join(setting_path, 'pois_region.json')))
     CONFIG['BASES'] = json.load(open(os.path.join(setting_path, 'pois_base.json')))
     CONFIG['SIDES'] = json.load(open(os.path.join(setting_path, 'pois_side.json')))
-    
+    CONFIG['SYMETRY'] = json.load(open(os.path.join(setting_path, 'pois_symetry.json')))
     CONFIG['SEQ_MAX_LEN'] = seq_max_len
 
     CONFIG['NUM_EXERCISES'] = num_exercises
@@ -37,7 +37,6 @@ def feature_engineering_sequence(poi, isrebase=False, poi_name='', pois={}, sett
         xs = poi['xs']
         ys = poi['ys']
         zs = poi['zs']
-        
     #original
     if settings['coordinates'] or isrebase:
         new_sequences.append(xs)
@@ -62,6 +61,13 @@ def feature_engineering_sequence(poi, isrebase=False, poi_name='', pois={}, sett
         if settings['distance']:
             new_sequences.append(transformations.distance(xs, ys, zs))
     
+    if not isrebase:
+        if settings['symetry_diference']:
+            new_sequences.append(transformations.symetry_diff(xs, 'xs', poi_name, pois, CONFIG['SYMETRY']))
+            new_sequences.append(transformations.symetry_diff(ys, 'ys', poi_name, pois, CONFIG['SYMETRY']))
+            new_sequences.append(transformations.symetry_diff(zs, 'zs', poi_name, pois, CONFIG['SYMETRY']))
+        
+    
     return new_sequences
 
 def build_region(pois, region, settings):
@@ -70,7 +76,7 @@ def build_region(pois, region, settings):
     for poi_name in sorted(CONFIG['REGIONS'].keys()):
         if CONFIG['REGIONS'][poi_name] == region or region == 'global':
             sequences = pois[poi_name]
-            exercise_sequence_region.extend(feature_engineering_sequence(sequences, isrebase=False, settings=settings))
+            exercise_sequence_region.extend(feature_engineering_sequence(sequences, isrebase=False, poi_name=poi_name, pois=pois, settings=settings))
             exercise_sequence_region.extend(feature_engineering_sequence(sequences, isrebase=True, poi_name=poi_name, pois=pois, settings=settings))
     
 

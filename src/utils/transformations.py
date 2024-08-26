@@ -46,3 +46,15 @@ def rebase(s, s_name, poi_name, pois, bases):
     base_name = bases[poi_name]
     base_s = pois[base_name][s_name]
     return[x - bx for x, bx in zip(s, base_s)]
+
+def symetry_diff(orig_s, ax_name, orig_poi_name, pois, symetries):
+    #print(f'orig_poi_name {orig_poi_name}')
+    #print(symetries)
+    #print(f'symetry_poi_name {symetries[orig_poi_name]}')
+
+    symetry_poi_name = symetries[orig_poi_name]
+    if symetry_poi_name == "None":
+        return [0]*len(orig_s)
+    
+    symetry_s = pois[symetry_poi_name][ax_name]
+    return[abs(x - bx) for x, bx in zip(orig_s, symetry_s)]
