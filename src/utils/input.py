@@ -75,6 +75,8 @@ def build_region(pois, region, settings):
     
     for poi_name in sorted(CONFIG['REGIONS'].keys()):
         if CONFIG['REGIONS'][poi_name] == region or region == 'global':
+            if poi_name not in pois:
+                continue
             sequences = pois[poi_name]
             exercise_sequence_region.extend(feature_engineering_sequence(sequences, isrebase=False, poi_name=poi_name, pois=pois, settings=settings))
             exercise_sequence_region.extend(feature_engineering_sequence(sequences, isrebase=True, poi_name=poi_name, pois=pois, settings=settings))
