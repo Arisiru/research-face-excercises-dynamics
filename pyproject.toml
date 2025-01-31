@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "research-face-excercises-dynamics"
+version = "0.1.0"
+description = "work on the understanding of patients recovery based on mimic excercises and measuring results in HB score and beyont"
+authors = ["Alan Spark <arisiru@hotmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.9.20,<3.11"
+pandas = "*"
+h5py = "*"
+scikit-learn = "*"
+matplotlib = "*"
+tsaug = "*"
+seaborn = "*"
+tsinterpret = "*"
+jupyterlab = "*"
+ipywidgets = "*"
+ipykernel = "*"
+
+[tool.poetry.group.mac.dependencies]
+tensorflow-metal = "^1.0.0"
+
+[tool.poetry.group.linux.dependencies]
+tensorflow = "^2.13.0"
+nvidia-tensorrt = "*"
+tensorrt = "*"
+nvidia-cudnn-cu12 = "^9.3.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
